@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelmonERP", "DelmonERP\DelmonERP.csproj", "{0E5A9683-D291-4FE7-B5A4-B3CC3910C693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAcess", "DatabaseAcess\DatabaseAcess.csproj", "{CBD00E0E-1E0D-44DC-99C0-BA910EBF745C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E5A9683-D291-4FE7-B5A4-B3CC3910C693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5A9683-D291-4FE7-B5A4-B3CC3910C693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5A9683-D291-4FE7-B5A4-B3CC3910C693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5A9683-D291-4FE7-B5A4-B3CC3910C693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD00E0E-1E0D-44DC-99C0-BA910EBF745C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD00E0E-1E0D-44DC-99C0-BA910EBF745C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD00E0E-1E0D-44DC-99C0-BA910EBF745C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD00E0E-1E0D-44DC-99C0-BA910EBF745C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE1F81EC-562D-476B-9B06-CCE72325529B}
+	EndGlobalSection
+EndGlobal
