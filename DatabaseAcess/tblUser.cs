@@ -11,8 +11,7 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -36,35 +35,13 @@ namespace DatabaseAcess
     
         public int UserID { get; set; }
         public int EmployeeID { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Select User Type")]
         public int UserTypeID { get; set; }
-     
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Full Name")]
         public string FullName { get; set; }
-       
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email Adress")]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Contact No")]
-        public int ContactNo { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "User Name")]
+        public string ContactNo { get; set; }
         public string UserName { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
         public string Password { get; set; }
-
-\        [Display(Name = "Status")]
-        public string IsActive { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblAccountControl> tblAccountControls { get; set; }

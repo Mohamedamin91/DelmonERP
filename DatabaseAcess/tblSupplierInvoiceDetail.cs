@@ -18,7 +18,7 @@ namespace DatabaseAcess
         public int SupplierInvoiceID { get; set; }
         public int ProductID { get; set; }
         public int PurchaseQuantity { get; set; }
-        public int purchaseUnitPrice { get; set; }
+        public double purchaseUnitPrice { get; set; }
     
         public virtual tblStock tblStock { get; set; }
         public virtual tblSupplierInvoice tblSupplierInvoice { get; set; }

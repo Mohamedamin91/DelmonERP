@@ -137,32 +137,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="DelmonErp.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DelmonErp.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="DelmonErp.edmx.diagram">
       <DependentUpon>DelmonErp.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DelmonErp.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DelmonErp.Context.cs</LastGenOutput>
       <DependentUpon>DelmonErp.edmx</DependentUpon>
+      <LastGenOutput>DelmonErp.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DelmonErp.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DelmonErp.edmx</DependentUpon>
       <LastGenOutput>DelmonErp.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,10 +13,10 @@ namespace DatabaseAcess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CloudErpV1Entities : DbContext
+    public partial class CloudErpV1Entities1 : DbContext
     {
-        public CloudErpV1Entities()
-            : base("name=CloudErpV1Entities")
+        public CloudErpV1Entities1()
+            : base("name=CloudErpV1Entities1")
         {
         }
     

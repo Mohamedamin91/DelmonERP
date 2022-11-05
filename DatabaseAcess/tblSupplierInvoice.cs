@@ -11,8 +11,7 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblSupplierInvoice
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,19 +21,11 @@ namespace DatabaseAcess
         }
     
         public int SupplierInvoiceID { get; set; }
-
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Select Supplier")]
         public int SupplierID { get; set; }
         public int CompanyID { get; set; }
         public int BranchID { get; set; }
         public int InvoiceNo { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.Currency)]
-        [Display(Name = "Total Amount")]
-        public int TotalAmount { get; set; }
+        public double TotalAmount { get; set; }
         public System.DateTime InvoiceDate { get; set; }
         public string Description { get; set; }
         public int UserID { get; set; }

@@ -11,8 +11,7 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblEmployee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,20 +19,17 @@ namespace DatabaseAcess
         {
             this.tblPayrolls = new HashSet<tblPayroll>();
         }
-
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.Currency)]
-        [Display(Name = "Total Amount")]
+    
         public int EmployeeID { get; set; }
-        public byte[] Name { get; set; }
-        public int ContactNo { get; set; }
+        public string Name { get; set; }
+        public string ContactNo { get; set; }
+        public string Photo { get; set; }
         public string Email { get; set; }
-        public byte[] Photo { get; set; }
         public string Address { get; set; }
-        public int CNIC { get; set; }
+        public string CNIC { get; set; }
         public string Designation { get; set; }
         public byte[] Description { get; set; }
-        public int MonthlySalary { get; set; }
+        public double MonthlySalary { get; set; }
         public int BranchID { get; set; }
         public int CompanyID { get; set; }
     

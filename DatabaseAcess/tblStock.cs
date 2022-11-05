@@ -11,8 +11,7 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblStock
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,41 +25,17 @@ namespace DatabaseAcess
         public int CategoryID { get; set; }
         public int CompanyID { get; set; }
         public int BranchID { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Quantity")]
         public int Quantity { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Sale Unit Price")]
-        public int SaleUnitPrice { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "CPU Price")]
-        public int CurrentPurchaseUnitPrice { get; set; }
-
-
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.Date)]
-        [Display(Name = "Expiry Date ")]
+        public double SaleUnitPrice { get; set; }
+        public double CurrentPurchaseUnitPrice { get; set; }
         public System.DateTime ExpiryDate { get; set; }
-
-
-        [Required(ErrorMessage = "*Required!")]
-        [DataType(DataType.Date)]
-        [Display(Name = "Manufacture Date")]
         public System.DateTime Manufacture { get; set; }
-
-        [Required(ErrorMessage = "*Required!")]
-        [Display(Name = "Treshold Qty")]
         public int StockTreshHoldQuantity { get; set; }
         public string Description { get; set; }
         public Nullable<int> Barcode { get; set; }
         public int UserID { get; set; }
+        public bool IsActive { get; set; }
     
         public virtual tblBranch tblBranch { get; set; }
         public virtual tblCategory tblCategory { get; set; }
