@@ -27,7 +27,6 @@ namespace DatabaseAcess
     
         public virtual tblBranch tblBranch { get; set; }
         public virtual tblCompany tblCompany { get; set; }
-        public virtual tblEmployee tblEmployee { get; set; }
         public virtual tblUser tblUser { get; set; }
     }
 }

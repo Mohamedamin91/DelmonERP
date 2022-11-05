@@ -21,7 +21,7 @@ namespace DatabaseAcess
         }
     
         public int CustomerID { get; set; }
-        public string Customername { get; set; }
+        public string CustomerName { get; set; }
         public int CustomerContact { get; set; }
         public string CustomerArea { get; set; }
         public string CustomerAddress { get; set; }

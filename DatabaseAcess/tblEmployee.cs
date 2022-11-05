@@ -14,12 +14,6 @@ namespace DatabaseAcess
     
     public partial class tblEmployee
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblEmployee()
-        {
-            this.tblPayrolls = new HashSet<tblPayroll>();
-        }
-    
         public int EmployeeID { get; set; }
         public string Name { get; set; }
         public string ContactNo { get; set; }
@@ -28,14 +22,12 @@ namespace DatabaseAcess
         public string Address { get; set; }
         public string CNIC { get; set; }
         public string Designation { get; set; }
-        public byte[] Description { get; set; }
+        public string Description { get; set; }
         public double MonthlySalary { get; set; }
         public int BranchID { get; set; }
         public int CompanyID { get; set; }
+        public int UserID { get; set; }
     
-        public virtual tblBranch tblBranch { get; set; }
         public virtual tblCompany tblCompany { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblPayroll> tblPayrolls { get; set; }
     }
 }
