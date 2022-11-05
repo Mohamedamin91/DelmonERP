@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="CloudErpV1Model.tblBranch" Width="1.5" PointX="3" PointY="24.375" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblBranchType" Width="1.5" PointX="0.75" PointY="25.875" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblCategory" Width="1.5" PointX="8.25" PointY="15.25" />
-        <EntityTypeShape EntityType="CloudErpV1Model.tblCompany" Width="1.5" PointX="3" PointY="11.25" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblCustomer" Width="1.5" PointX="8.25" PointY="18.875" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblCustomerInvoice" Width="1.5" PointX="13.5" PointY="18.5" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblCustomerInvoiceDetail" Width="1.5" PointX="15.75" PointY="20.5" />
@@ -29,7 +28,6 @@
         <EntityTypeShape EntityType="CloudErpV1Model.tblUser" Width="1.5" PointX="3" PointY="17.75" />
         <EntityTypeShape EntityType="CloudErpV1Model.tblUserType" Width="1.5" PointX="0.75" PointY="19.75" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblAccountControl_tblBranch" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblAccountControl_tblCompany" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblAccountControl_tblUser" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblAccountSubControl_tblAccountControl" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblTransaction_tblAccountControl" />
@@ -49,17 +47,8 @@
         <AssociationConnector Association="CloudErpV1Model.FK_tblStock_tblBranch" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblSupplier_tblBranch" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblSupplierInvoiceTable_tblBranch" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblCategory_tblCompany" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblCategory_tblUser" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblStock_tblCategory" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomer_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerInvoice_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerPayment_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblEmployee_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblPayroll_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblStock_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblSupplier_tblCompany" />
-        <AssociationConnector Association="CloudErpV1Model.FK_tblSupplierInvoiceTable_tblCompany" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblCustomer_tblUser" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerInvoice_tblCustomer" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerInvoice_tblUser" />
@@ -81,6 +70,17 @@
         <AssociationConnector Association="CloudErpV1Model.FK_tblSupplierPayment_tblUser" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblTransaction_tblUser" />
         <AssociationConnector Association="CloudErpV1Model.FK_tblUser_tblUserType" />
+        <EntityTypeShape EntityType="CloudErpV1Model.tblCompany" Width="1.5" PointX="3" PointY="13.5" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblAccountControl_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblCategory_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomer_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerInvoice_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblCustomerPayment_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblEmployee_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblPayroll_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblStock_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblSupplier_tblCompany" />
+        <AssociationConnector Association="CloudErpV1Model.FK_tblSupplierInvoiceTable_tblCompany" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

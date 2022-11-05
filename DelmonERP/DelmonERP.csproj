@@ -139,6 +139,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CompanyLogos\Delmonlogo.jpg" />
+    <Content Include="Content\CompanyLogos\logo %281%29.jpg" />
+    <Content Include="Content\CompanyLogos\logo %282%29.jpg" />
+    <Content Include="Content\CompanyLogos\logo %283%29.jpg" />
+    <Content Include="Content\CompanyLogos\logo.jpg" />
     <Content Include="Content\Template\css\app-rtl.css" />
     <Content Include="Content\Template\css\app.css" />
     <Content Include="Content\Template\css\bootstrap-rtl.css" />
@@ -372,6 +377,8 @@
     <Content Include="Views\tblUsers\Details.cshtml" />
     <Content Include="Views\tblUsers\Edit.cshtml" />
     <Content Include="Views\tblUsers\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\ForgetPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
