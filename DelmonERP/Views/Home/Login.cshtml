@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <div class="card-body">
-                    <p class="text-center py-2">SIGN IN TO CONTINUE.</p>
+                    <p style="color: #35348d; " class="text-center py-2"><strong>SIGN IN TO CONTINUE.</strong></p>
 
                     @using (Html.BeginForm("LoginUser", "Home", FormMethod.Post, new {@class="mb-3" , id = "loginForm" } ))
                     {
@@ -58,30 +58,31 @@
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <div class="checkbox c-checkbox float-left mt-0">
+                                <div style="color: #35348d" class="checkbox c-checkbox float-left mt-0">
                                     <label>
-                                        <input type="checkbox" value="" name="remember">
-                                        <span class="fa fa-check"></span>Remember Me
+                                        <input style="color: #35348d" type="checkbox" value="" role="checkbox" name="remember">
+                                        <span  class="fa fa-check"></span>Remember Me
                                     </label>
                                 </div>
-                                <div class="float-right">
+                                <div style="color: #35348d" class="float-right">
 
-                                    @Html.ActionLink("Forgot Your Password?", "ForgetPassword", "Home", new { @class = "" })
-                                </div>
-                            </div>
-                            <button class="btn btn-block btn-primary mt-3" type="submit">Login</button>
-                    }
-                        @*<p class="pt-3 text-center">Need to Signup?</p><a class="btn btn-block btn-secondary" href="register.html">Register Now</a>*@
+                                    @Html.ActionLink("Forgot Your Password?", "ForgetPassword", "Home", new { @class = "" }, new { @style = "color:#35348d;" })
+
+                        </div>
                     </div>
+                    <button class="btn btn-block btn-primary mt-3" style="background-color: #e92b2d; border-color: #e92b2d " type="submit">Login</button>
+            }
+                @*<p class="pt-3 text-center">Need to Signup?</p><a class="btn btn-block btn-secondary" href="register.html">Register Now</a>*@
             </div>
-            <!-- END card-->
-            <div class="p-3 text-center">
-                <span class="mr-2">&copy;</span>
-                <span>2022 - </span>
-                <span>Delmon Group of  Companies</span>
-               
-            </div>
-        </div>
+    </div>
+                                       <!-- END card-->
+                                    <div class="p-3 text-center">
+                                        <span style="color: #35348d" class="mr-2">&copy;</span>
+                                        <span style="color: #35348d">2022 - </span>
+                                        <span style="color: #35348d">Delmon Group of  Companies</span>
+
+                                    </div>
+                                </div>
     </div>
     <!-- =============== VENDOR SCRIPTS ===============-->
     <!-- MODERNIZR-->
