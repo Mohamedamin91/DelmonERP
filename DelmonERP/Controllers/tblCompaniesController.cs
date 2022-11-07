@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DatabaseAcess;
+using DelmonERP.HelperClasses;
 
 namespace DelmonERP.Controllers
 {
@@ -14,6 +15,7 @@ namespace DelmonERP.Controllers
     {
         private CloudErpV1Entities1 db = new CloudErpV1Entities1();
 
+        FileHelper fileHelper = new FileHelper();
         // GET: tblCompanies
         public ActionResult Index()
         {
@@ -58,7 +60,7 @@ namespace DelmonERP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CompanyID,Name,Logo")] tblCompany tblCompany)
+        public ActionResult Create( tblCompany tblCompany)
         {
             if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
             {
@@ -68,6 +70,28 @@ namespace DelmonERP.Controllers
             {
                 db.tblCompanies.Add(tblCompany);
                 db.SaveChanges();
+
+                if (tblCompany.LogoFile != null)
+                {
+                    var folder = "~/Content/CompanyLogos";
+                    var file = string.Format("{0}.jpg", tblCompany.CompanyID);
+                    var response = FileHelper.UploadPhoto(tblCompany.LogoFile, folder, file);
+                    if (response)
+                    {
+                        var pic = string.Format("{0}/{1}", folder, file);
+                        tblCompany.Logo = pic;
+                        db.Entry(tblCompany).State = EntityState.Modified;
+                        db.SaveChanges();
+                    
+                    }
+
+
+                
+                }
+
+
+
+
                 return RedirectToAction("Index");
             }
 
@@ -106,6 +130,18 @@ namespace DelmonERP.Controllers
             }
             if (ModelState.IsValid)
             {
+
+                if(tblCompany.LogoFile !=null)
+                {
+                    var folder = "~/Content/CompanyLogos";
+                    var file = string.Format("{0}.jpg", tblCompany.CompanyID);
+                    var response = FileHelper.UploadPhoto(tblCompany.LogoFile, folder, file);
+                    if (response)
+                    {
+                        var pic = string.Format("{0}/{1}", folder, file);
+                        tblCompany.Logo = pic;
+                    }
+                }
                 db.Entry(tblCompany).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
