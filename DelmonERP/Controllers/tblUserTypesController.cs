@@ -17,12 +17,20 @@ namespace DelmonERP.Controllers
         // GET: tblUserTypes
         public ActionResult Index()
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             return View(db.tblUserTypes.ToList());
         }
 
         // GET: tblUserTypes/Details/5
         public ActionResult Details(int? id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -38,6 +46,11 @@ namespace DelmonERP.Controllers
         // GET: tblUserTypes/Create
         public ActionResult Create()
         {
+         
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             return View();
         }
 
@@ -46,8 +59,12 @@ namespace DelmonERP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserTypeID,UserType")] tblUserType tblUserType)
+        public ActionResult Create( tblUserType tblUserType)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             if (ModelState.IsValid)
             {
                 db.tblUserTypes.Add(tblUserType);
@@ -61,6 +78,10 @@ namespace DelmonERP.Controllers
         // GET: tblUserTypes/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -78,7 +99,7 @@ namespace DelmonERP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserTypeID,UserType")] tblUserType tblUserType)
+        public ActionResult Edit( tblUserType tblUserType)
         {
             if (ModelState.IsValid)
             {
@@ -109,6 +130,10 @@ namespace DelmonERP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login");
+            }
             tblUserType tblUserType = db.tblUserTypes.Find(id);
             db.tblUserTypes.Remove(tblUserType);
             db.SaveChanges();

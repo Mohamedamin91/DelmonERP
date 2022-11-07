@@ -33,10 +33,28 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#/">
                         <div class="brand-logo">
-                            <img class="img-fluid" src="~/Content/Template/img/logo.png" alt="App Logo">
+                            
+                                @{
+                                    var logo = string.Empty;
+
+                                    if (string.IsNullOrEmpty(Convert.ToString(Session["Logo"])))
+                                    {
+
+                                        logo = "~/Content/Template/img/logo-single.png";
+                                    }
+                                    else
+                                    {
+                                        logo     = Convert.ToString(Session["Logo"]);
+                                    }
+
+
+                                }
+                            
+                            <img class="img-fluid" src="@Url.Content(logo)" alt="App Logo"width="60" height="60" />
+                            @*<h6 style="color:white;font-size:14px">@Session["CName"]</h6>*@
                         </div>
                         <div class="brand-logo-collapsed">
-                            <img class="img-fluid" src="~/Content/Template/img/logo-single.png" alt="App Logo">
+                            <img class="img-fluid" src="@Url.Content(logo)" alt="App Logo "width="60" height="60">
                         </div>
                     </a>
                 </div>
@@ -63,7 +81,7 @@
                     <!-- END User avatar toggle-->
                     <!-- START lock screen-->
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="lock.html" title="Lock screen">
+                        <a class="nav-link" href="@Url.Action("Logout", "Home") " title = "Logout" >
                             <em class="icon-lock"></em>
                         </a>
                     </li>
@@ -180,14 +198,30 @@
                                     <!-- User picture-->
                                     <div class="user-block-picture">
                                         <div class="user-block-status">
-                                            <img class="img-thumbnail rounded-circle" src="~/Content/Template/img/user/02.jpg" alt="Avatar" width="60" height="60">
+                                            @{
+                                                var userimg = string.Empty;
+
+                                                if (string.IsNullOrEmpty(Convert.ToString(Session["EPhoto"])))
+                                                {
+
+                                                    userimg = "~/Content/Template/img/userdefualt.png";
+                                                }
+                                                else
+                                                {
+                                                    userimg = Convert.ToString(Session["EPhoto"]);
+                                                }
+
+
+                                            }
+
+                                            <img class="img-thumbnail rounded-circle" src="@Url.Content(userimg)" alt="Avatar" width="60" height="60">
                                             <div class="circle bg-success circle-lg"></div>
                                         </div>
                                     </div>
                                     <!-- Name and Job-->
                                     <div class="user-block-info">
-                                        <span class="user-block-name">Hello, Mike</span>
-                                        <span class="user-block-role">Designer</span>
+                                        <span class="user-block-name">Hello, @Session["UserName"]</span>
+                                        <span class="user-block-role">@Session["EDesignation"]</span>
                                     </div>
                                 </div>
                             </div>
@@ -243,9 +277,21 @@
                                 </li>
                             </ul>
                         </li>
+
+                        @* Configuration *@
+                        <li class="nav-heading ">
+                            <span data-localize="sidebar.heading.COMPONENTS">User Settings</span>
+                        </li>
+                        <li class="">
+                            <a href="@Url.Action("Index","tblUserTypes")" title="User Types" >
+                                <em class="icon-chemistry"></em>
+                                <span data-localize="sidebar.nav.element.ELEMENTS">User Types</span>
+                            </a>
+                        </li>
                         <li class="nav-heading ">
                             <span data-localize="sidebar.heading.COMPONENTS">Components</span>
                         </li>
+
                         <li class=" ">
                             <a href="#elements" title="Elements" data-toggle="collapse">
                                 <em class="icon-chemistry"></em>
@@ -473,6 +519,11 @@
                                 </li>
                             </ul>
                         </li>
+
+
+
+
+
                         <li class="nav-heading ">
                             <span data-localize="sidebar.heading.MORE">More</span>
                         </li>

@@ -173,6 +173,7 @@
     <Content Include="Content\Template\img\mb-sample.jpg" />
     <Content Include="Content\Template\img\mockup.png" />
     <Content Include="Content\Template\img\profile-bg.jpg" />
+    <Content Include="Content\Template\img\userdefualt.png" />
     <Content Include="Content\Template\img\user\01.jpg" />
     <Content Include="Content\Template\img\user\02.jpg" />
     <Content Include="Content\Template\img\user\03.jpg" />
