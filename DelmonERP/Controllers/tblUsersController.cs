@@ -17,6 +17,10 @@ namespace DelmonERP.Controllers
         // GET: tblUsers
         public ActionResult Index()
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             var tblUsers = db.tblUsers.Include(t => t.tblUserType);
             return View(tblUsers.ToList());
         }
@@ -24,6 +28,10 @@ namespace DelmonERP.Controllers
         // GET: tblUsers/Details/5
         public ActionResult Details(int? id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +47,10 @@ namespace DelmonERP.Controllers
         // GET: tblUsers/Create
         public ActionResult Create()
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             ViewBag.UserTypeID = new SelectList(db.tblUserTypes, "UserTypeID", "UserType");
             return View();
         }
@@ -50,6 +62,10 @@ namespace DelmonERP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,EmployeeID,UserTypeID,FullName,Email,ContactNo,UserName,Password,IsActive")] tblUser tblUser)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             if (ModelState.IsValid)
             {
                 db.tblUsers.Add(tblUser);
@@ -64,6 +80,10 @@ namespace DelmonERP.Controllers
         // GET: tblUsers/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -84,6 +104,10 @@ namespace DelmonERP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserID,EmployeeID,UserTypeID,FullName,Email,ContactNo,UserName,Password,IsActive")] tblUser tblUser)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             if (ModelState.IsValid)
             {
                 db.Entry(tblUser).State = EntityState.Modified;
@@ -97,6 +121,10 @@ namespace DelmonERP.Controllers
         // GET: tblUsers/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,6 +142,10 @@ namespace DelmonERP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login","Home");
+            }
             tblUser tblUser = db.tblUsers.Find(id);
             db.tblUsers.Remove(tblUser);
             db.SaveChanges();
