@@ -456,7 +456,7 @@ _:-ms-lang(x),
   padding: 0;
   min-height: 55px;
   background-color: #23b7e5;
-  background-image: linear-gradient(to right, #23b7e5 0%, #51c6ea 100%);
+  background-image: linear-gradient(to right, #23b7e5 0%, #fcfcfc 100%);
   background-repeat: repeat-x; }
   @media (min-width: 768px) {
     .topnavbar .navbar-header {
@@ -2456,7 +2456,7 @@ fieldset {
   color: #fff !important; }
 
 .bg-info-light {
-  background-color: #51c6ea;
+  background-color: #fcfcfc;
   color: #fff !important; }
 
 .bg-info-dark {

@@ -11,7 +11,8 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblUserType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +20,11 @@ namespace DatabaseAcess
         {
             this.tblUsers = new HashSet<tblUser>();
         }
-    
+
         public int UserTypeID { get; set; }
+
+        [Required(ErrorMessage = "*Requried")]
+
         public string UserType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

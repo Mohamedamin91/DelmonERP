@@ -142,10 +142,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CompanyLogos\Delmonlogo.jpg" />
-    <Content Include="Content\CompanyLogos\logo %281%29.jpg" />
-    <Content Include="Content\CompanyLogos\logo %282%29.jpg" />
     <Content Include="Content\CompanyLogos\logo %283%29.jpg" />
-    <Content Include="Content\CompanyLogos\logo.jpg" />
     <Content Include="Content\Template\css\app-rtl.css" />
     <Content Include="Content\Template\css\app.css" />
     <Content Include="Content\Template\css\bootstrap-rtl.css" />
@@ -346,6 +343,7 @@
     <Content Include="Content\Template\vendor\weather-icons\font\weathericons-regular-webfont.woff" />
     <Content Include="Content\Template\vendor\weather-icons\font\weathericons-regular-webfont.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />

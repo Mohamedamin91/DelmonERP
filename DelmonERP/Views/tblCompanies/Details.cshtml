@@ -4,6 +4,85 @@
     ViewBag.Title = "Company Details";
 }
 
+
+<div class="card">
+    <div class="row row-flush">
+        <div class="col-5 d-flex align-items-center justify-content-center" style="background-size:contain">
+        <div class="col-7">
+            <div class="p-3">
+                <div class="float-right">
+                    @Html.ActionLink("Edit Profile", "Edit", new { id = Model.CompanyID }, new { @class = "btn btn-primary btn-sm" })
+                </div>
+                <p>
+                    <span class="text-lg">
+                        @Html.DisplayFor(model => model.Name)
+
+                    </span>
+                </p>
+                <p>
+                    <strong>
+                        @Html.DisplayFor(model => model.Name)
+                    </strong>
+                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p>
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+        </div>
+</div>
+@Html.ActionLink("Update Profile", "Edit", new { id = Model.CompanyID }, new { @class = "btn btn-pill-left btn-inverse btn-primary fa fa-edit" })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Company</h2>
 
 <div>
@@ -11,7 +90,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-              Company title
+            Company title
         </dt>
 
         <dd>
@@ -19,7 +98,7 @@
         </dd>
 
         <dt>
-           Logo
+            Logo
         </dt>
 
         <dd>

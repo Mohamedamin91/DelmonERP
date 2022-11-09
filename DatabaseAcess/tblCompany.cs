@@ -38,7 +38,7 @@ namespace DatabaseAcess
           
         public string Name { get; set; }
 
-        [DataType (DataType.ImageUrl)]
+        //[DataType (DataType.ImageUrl)]
         public string Logo { get; set; }
 
         [NotMapped]
