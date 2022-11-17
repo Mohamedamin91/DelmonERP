@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "New Company";
+}
+
+<div class="card card-default">
+    <div class="card-header">
+
+        Registration
+        @ViewBag.Message
+
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("RegistrationForm", "CompanyRegistration",FormMethod.Post,new { @class="example-form"}))
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <h4>
+                    User Profile
+                    <br>
+                    <small>Enter User Details</small>
+                </h4>
+                <fieldset>
+                    <label for="userName">User Name *</label>
+                    <input class="form-control required" id="UserName" name="UserName" type="text">
+                    <label for="password">Password *</label>
+                    <input class="form-control required" id="Password" name="Password" type="password">
+                    <label for="confirm">Confirm Password *</label>
+                    <input class="form-control required" id="CPassword" name="CPassword" type="password">
+                    <p>(*) Mandatory</p>
+                </fieldset>
+                <h4>
+                    Personal Profile
+                    <br>
+                    <small>Enter Focal Person Detials </small>
+                </h4>
+                <fieldset>
+                    <label for="name">Employee Name *</label>
+                    <input class="form-control required" id="EName" name="EName" type="text">
+                    <label for="phone">ContactNo *</label>
+                    <input class="form-control required" id="EContactNo" name="EContactNo" type="number">
+                    <label for="email">Email *</label>
+                    <input class="form-control required" id="EEmail" name="EEmail" type="text">
+                    <label for="address">Address</label>
+                    <input class="form-control required" id="EAddress" name="EAddress" type="text">
+                    <label>CNIC</label>
+                    <input class="form-control required" id="ECNIC" name="ECNIC" type="text">
+                    <label>Designation</label>
+                    <input required class="form-control required" id="EDesignation" name="EDesignation" type="text">
+                    <label>Description</label>
+                    <input required class="form-control required" id="EDescription" name="EDescription" type="text">
+                    <label>Basic Salary</label>
+                    <input required class="form-control required" id="EMonthlySalary" name="EMonthlySalary" type="number">
+                    <p>(*) Mandatory</p>
+                </fieldset>
+                <h4>
+                    Company Profile
+                    <br>
+                    <small>Enter Company Details</small>
+                </h4>
+                <fieldset>
+                    <label for="name">Company *</label>
+                    @*<input form="name" class="form-control required" id="CName" name="CName" type="text">*@
+                    @Html.TextBox("CName", null, new { @class = "form-control", @type = "text", required = "required" })
+
+                    <label>Branch Title *</label>
+                    <input class="form-control required" id="BranchName" name="BranchName" type="text">
+
+                    <label>Branch Contact</label>
+                    <input class="form-control required" id="BranchContact" name="BranchContact" type="number">
+
+                    <label>Branch Address</label>
+                    <input class="form-control required" id="BranchAddress" name="BranchAddress" type="text">
+
+
+                    <p>(*) Mandatory</p>
+                </fieldset>
+                <h4>
+                    Finish
+                    <br>
+                    <small>Please check before submission</small>
+                </h4>
+                <fieldset>
+                    <p class="lead">One last check</p>
+                    <input type="submit" value="Submit Registration " class="btn btn-outline-success" />
+                </fieldset>
+            </div>
+        }
+    </div>
+</div>
+

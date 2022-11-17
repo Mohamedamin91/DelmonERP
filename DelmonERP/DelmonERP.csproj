@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CompanyRegistrationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\tblCompaniesController.cs" />
     <Compile Include="Controllers\tblUsersController.cs" />
@@ -134,6 +135,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HelperClasses\FileHelper.cs" />
+    <Compile Include="Models\CompanyRegistrationMV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -385,10 +387,10 @@
     <Content Include="Views\tblCompanies\Details.cshtml" />
     <Content Include="Views\tblCompanies\Edit.cshtml" />
     <Content Include="Views\tblCompanies\Index.cshtml" />
+    <Content Include="Views\CompanyRegistration\RegistrationForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
