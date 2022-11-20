@@ -11,7 +11,8 @@ namespace DatabaseAcess
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblBranch
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -30,13 +31,20 @@ namespace DatabaseAcess
         }
     
         public int BranchID { get; set; }
+        [Required (ErrorMessage = "Required ! ") ]
         public int BranchTypeID { get; set; }
+        [Required(ErrorMessage = "Required ! ")]  
         public string BranchName { get; set; }
+        [Required(ErrorMessage = "Required ! ")]
         public string BranchContact { get; set; }
+        [Required(ErrorMessage = "Required ! ")]
         public string BranchAddress { get; set; }
+        [Required(ErrorMessage = "Required ! ")]
         public int CompanyID { get; set; }
+        [Required(ErrorMessage = "Required ! ")]
         public Nullable<int> BrchID { get; set; }
-    
+        [Required(ErrorMessage = "Required ! ")]
+     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblAccountControl> tblAccountControls { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -56,8 +56,8 @@ namespace DelmonERP.Controllers
             }
             int companyid = 0;
             companyid = Convert.ToInt32(Convert.ToString(Session["ECompanyID"]));
-            ViewBag.BrchID = new SelectList(db.tblBranches.Where(c => c.CompanyID == companyid).ToList(), "BranchID", "BranchName");
-            ViewBag.BranchTypeID = new SelectList(db.tblBranchTypes, "BranchTypeID", "BranchType");
+            ViewBag.BrchID = new SelectList(db.tblBranches.Where(c => c.CompanyID == companyid).ToList(), "BranchID", "BranchName",0);
+            ViewBag.BranchTypeID = new SelectList(db.tblBranchTypes, "BranchTypeID", "BranchType",0);
          
             return View();
         }
