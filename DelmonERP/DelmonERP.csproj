@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CompanyRegistrationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\tblBranchesController.cs" />
     <Compile Include="Controllers\tblCompaniesController.cs" />
     <Compile Include="Controllers\tblUsersController.cs" />
     <Compile Include="Controllers\tblUserTypesController.cs" />
@@ -388,6 +389,11 @@
     <Content Include="Views\tblCompanies\Edit.cshtml" />
     <Content Include="Views\tblCompanies\Index.cshtml" />
     <Content Include="Views\CompanyRegistration\RegistrationForm.cshtml" />
+    <Content Include="Views\tblBranches\Create.cshtml" />
+    <Content Include="Views\tblBranches\Delete.cshtml" />
+    <Content Include="Views\tblBranches\Details.cshtml" />
+    <Content Include="Views\tblBranches\Edit.cshtml" />
+    <Content Include="Views\tblBranches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

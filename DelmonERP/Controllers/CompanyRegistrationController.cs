@@ -16,6 +16,10 @@ namespace DelmonERP.Controllers
 
         public ActionResult RegistrationForm()
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -38,6 +42,10 @@ namespace DelmonERP.Controllers
             string  BranchAddress
             )
         {
+            if (string.IsNullOrEmpty(Convert.ToString(Session["ECompanyID"])))
+            {
+                return RedirectToAction("Login", "Home");
+            }
             try
             {
                  if (!string.IsNullOrEmpty(UserName)
